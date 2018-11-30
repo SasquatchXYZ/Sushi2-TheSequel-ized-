@@ -1,0 +1,1 @@
+CREATE DATABASE sushi2_db;

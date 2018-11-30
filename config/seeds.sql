@@ -1,4 +1,4 @@
-USE sushi_db;
+USE sushi2_db;
 
 INSERT INTO sushi (sushi_name, mindfully_eaten)
 VALUES ('Ankimo', 0),

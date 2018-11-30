@@ -24,7 +24,7 @@
             <div class="card bg-transparent">
                 <div class="card-body text-center text-white">
                     <ul class="list-group-flush">
-                        {{#each sushi}}
+                        {{#each Sushi}}
                             {{#unless mindfully_eaten}}
                                 {{> sushi-block mindfully_eaten=true}}
                             {{/unless}}
@@ -38,7 +38,7 @@
             <div class="card bg-transparent">
                 <div class="card-body text-center text-white">
                     <ul class="list-group-flush">
-                        {{#each sushi}}
+                        {{#each Sushi}}
                             {{#if mindfully_eaten}}
                                 {{> sushi-block mindfully_eaten=false}}
                             {{/if}}
