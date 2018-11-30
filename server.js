@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+const db = require('./models');
 
 // Enable the ability to serve static content for the app from the 'public' directory.
 app.use(express.static('public'));
@@ -30,6 +31,8 @@ app.use(routes);
 
 
 // Start the server so that we can listen for client requests & log it.
-app.listen(PORT, function () {
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
     console.log(`Server listening on http://localhost:${PORT}`)
+  })
 });

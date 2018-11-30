@@ -14,8 +14,8 @@ router.get('/', function (req, res) {
   db.Sushi.findAll({
     order: [['sushi_name', 'ASC']]
   }).then(function (data) {
-    const hbObject = {Sushi: data};
-    res.render('index', hbObject)
+    const hbsObject = {Sushi: data};
+    res.render('index', hbsObject)
   });
 
 
