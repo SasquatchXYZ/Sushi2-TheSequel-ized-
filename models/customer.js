@@ -1,3 +1,4 @@
+/*
 module.exports = function (sequelize, DataTypes) {
   const Customer = sequelize.define('Customer', {
     customer_name: {
@@ -10,4 +11,4 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   return Customer
-};
+};*/
