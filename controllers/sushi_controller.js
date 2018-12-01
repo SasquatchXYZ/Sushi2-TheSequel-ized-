@@ -51,9 +51,7 @@ router.post('/api/sushi', function (req, res) {
 // it passes the eaten status and the ID on to the model.
 router.put('/api/sushi/:id', function (req, res) {
 
-  db.Sushi.update({
-    devoured: true
-  },{
+  db.Sushi.update(req.body, {
     where: {
       id: req.params.id
     }
