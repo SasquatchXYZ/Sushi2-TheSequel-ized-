@@ -9,19 +9,20 @@
 </li>-->
 
 <li class="list-group-item">
-    {{#if mindfully_eaten}}
-        <button type="button" class="delete-sushi btn btn-outline-danger btn-sm left" data-id="{{this.dataValues.id}}"><i
-                class="fas fa-times"></i></button>
-        {{this.dataValues.sushi_name}}
-        <button class="shift btn btn-outline-warning btn-sm right" data-id="{{this.dataValues.id}}"
-                data-newme="{{mindfully_eaten}}">Enjoy
-        </button>
-    {{else}}
-        <button class="shift btn btn-outline-info btn-sm left" data-id="{{this.dataValues.id}}" data-newme="{{mindfully_eaten}}">
-            Reorder
-        </button>
-        {{this.dataValues.sushi_name}}
-        <button type="button" class="delete-sushi btn btn-outline-danger btn-sm right" data-id="{{this.dataValues.id}}"><i
-                class="fas fa-times"></i></button>
-    {{/if}}
+  {{#if mindfully_eaten}}
+    <button type="button" class="delete-sushi btn btn-outline-danger btn-sm left" data-id="{{this.dataValues.id}}"><i
+      class="fas fa-times"></i></button>
+    {{this.dataValues.sushi_name}}
+    <button class="shift btn btn-outline-warning btn-sm right" data-id="{{this.dataValues.id}}"
+            data-newme="{{mindfully_eaten}}">Enjoy
+    </button>
+  {{else}}
+    <button class="shift btn btn-outline-info btn-sm left" data-id="{{this.dataValues.id}}"
+            data-newme="{{mindfully_eaten}}">
+      Reorder
+    </button>
+    {{this.dataValues.sushi_name}}
+    <button type="button" class="delete-sushi btn btn-outline-danger btn-sm right" data-id="{{this.dataValues.id}}"><i
+      class="fas fa-times"></i></button>
+  {{/if}}
 </li>

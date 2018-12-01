@@ -18,14 +18,6 @@ router.get('/', function (req, res) {
     res.render('index', hbsObject)
   });
 
-
-  /*sushi.selectAll(function (data) {
-    const hbsObject = {
-      sushi: data
-    };
-    //console.log(hbsObject);
-    res.render('index', hbsObject);
-  });*/
 });
 
 // POST route to add a new sushi to the database and page, it passes the name and the eaten status to the model.
@@ -38,13 +30,6 @@ router.post('/api/sushi', function (req, res) {
     res.status(200).json(sushiCreate)
   });
 
-/*  sushi.insertOne(
-    ['sushi_name', 'mindfully_eaten'],
-    [req.body.sushi_name, req.body.mindfully_eaten],
-    function (result) {
-      res.status(200)
-        .json({id: result.insertId});
-    });*/
 });
 
 // PUT route to update the status from not eaten to eaten and vice versa,
@@ -55,20 +40,10 @@ router.put('/api/sushi/:id', function (req, res) {
     where: {
       id: req.params.id
     }
-  }).then(function(sushiUpdate) {
+  }).then(function (sushiUpdate) {
     res.status(200).json(sushiUpdate)
   });
 
-
-/*  const id = `id = ${req.params.id}`;
-
-  sushi.updateOne({mindfully_eaten: req.body.mindfully_eaten}, id, function (result) {
-    if (result.changedRows === 0) {
-      return res.status(404).end()
-    } else {
-      res.status(200).end()
-    }
-  });*/
 });
 
 // DELETE route to remove a sushi from the database, it passes the ID of the deleted sushi to the model.
@@ -78,19 +53,10 @@ router.delete('/api/sushi/:id', function (req, res) {
     where: {
       id: req.params.id
     }
-  }).then(function(sushiDestroy) {
+  }).then(function (sushiDestroy) {
     res.status(200).json(sushiDestroy)
   });
 
-  /*const id = `id = ${req.params.id}`;
-
-  sushi.deleteOne(id, function (result) {
-    if (result.affectedRows === 0) {
-      return res.status(404).end()
-    } else {
-      res.status(200).end()
-    }
-  });*/
 });
 
 
